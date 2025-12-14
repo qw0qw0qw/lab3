@@ -1,0 +1,27 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+#include<locale.h>
+
+float a, b, res1, res2, res3;
+
+void main()
+{
+	setlocale(LC_ALL, "RUS");
+	puts("Введите первое вещественное число");
+	scanf("%f", &a);
+	puts("Введите второе вещественное число");
+	scanf("%f", &b);
+	res1 = a * b;
+	res2 = a + b;
+	res3 = a - b;
+
+	puts("-------------------------------------------------------------");
+	puts("|       a * b       |       a + b       |       a - b       |");
+	puts("-------------------------------------------------------------");
+	printf("| %7.1g * %7.1g | %7.1g + %7.1g | %7.1g - %7.1g |\n", a, b, a, b, a, b);
+	puts("-------------------------------------------------------------");
+	printf("| %17.1g | %17.1g | %17.1g |\n", res1, res2, res3);
+
+	return 0;
+
+}
